@@ -1,0 +1,473 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body h1 {
+    padding-bottom: 0.3em;
+    font-size: 32px;
+    border-bottom: 1px solid #eee;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+body h2 {
+    padding-bottom: 0.3em;
+    font-size: 24px;
+    border-bottom: 1px solid #eee;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+body h3 {
+    font-size: 22px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+body h4 {
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+body hr {
+    background-color: rgb(231, 231, 231);
+    border-top-color: rgb(128, 128, 128);
+    border-top-style: none;
+    border-top-width: 0px;
+    box-sizing: content-box;
+    font-size: 16px;
+    height: 4px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 24px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+footer.footer-show {
+    transition: transform 600ms ease-in-out;
+    transform: translate(0, 0);
+}
+
+footer.footer-hide {
+    transition: transform 500ms ease-in-out;
+    transform: translate(0, 50px);
+}
+
+footer {
+    background: #f8f8f8;
+    color: rgb(104, 104, 104);
+    font-size: 15px;
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    display: block;
+    background-attachment: scroll;
+    border-top-color: rgb(222, 222, 222);
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+footer a {
+    color: #cac9c9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+footer .footer {
+    display: flex;
+}
+
+footer .footer_content {
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+body {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    text-shadow: 0 0 1em transparent, 1px 1px 1.2px rgba(0, 0, 0, 0.004);
+    position: relative !important;
+    margin: 0 !important;
+    margin-bottom: 30px !important;
+}
+
+.container-thiner {
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0 !important;
+}
+
+.affix~.container-fluid {
+    position: relative;
+    top: 50px;
+}
+
+pre.prettyprint {
+    padding: 10px 2px;
+    margin: 0;
+    font-size: 14px;
+    max-width: 100%;
+}
+
+pre.prettyprint script.pre-script {
+    display: inline-block;
+}
+
+/*.linenums>li{
+    border-left:3px solid #6CE26C;
+}*/
+
+/* ========================
+//#google-prettify-monokai-theme
+//#Version: 0.3
+//#Author: RaphaelDDL
+//#Github: https://github.com/RaphaelDDL/google-prettify-monokai-theme/
+//For use with Google Code Prettify, HTML Syntax only
+//======================== */
+
+pre .str,
+code .str {
+    color: #e6db5a;
+}
+
+/* string */
+pre .kwd,
+code .kwd {
+    color: #66d9ef;
+}
+
+/* keyword */
+pre .com,
+code .com {
+    color: #75715e;
+    font-style: italic;
+}
+
+/* comment */
+pre .typ,
+code .typ {
+    color: #66d9ef;
+}
+
+/* type */
+pre .lit,
+code .lit {
+    color: #ae81ff;
+}
+
+/* literal */
+pre .pun,
+code .pun {
+    color: #fff;
+}
+
+/* punctuation */
+pre .pln,
+code .pln {
+    color: #fff;
+}
+
+/* plaintext */
+pre .tag,
+code .tag {
+    color: #f92672;
+}
+
+/* html/xml tag */
+pre .atn,
+code .atn {
+    color: #a6e22a;
+}
+
+/* html/xml attribute name */
+pre .atv,
+code .atv {
+    color: #e6db74;
+}
+
+/* html/xml attribute value */
+pre .dec,
+code .dec {
+    color: #ae81ff;
+}
+
+/* decimal */
+
+pre.prettyprint,
+code.prettyprint {
+    background-color: #272822;
+
+    font-family: consolas, menlo, courier, monospace;
+}
+
+
+
+
+
+/* ------------------------
+//Section: class 'linenums' for line numbering
+//------------------------ */
+ol.linenums {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #75715e;
+    list-style: decimal inside !important;
+}
+
+/* IE indents via margin-left */
+
+
+/* =============================================
+//Section: Print Styles (partially from Sunburn Theme)
+//================================================ */
+@media print {
+
+    pre.prettyprinted,
+    pre.prettyprint,
+    code.prettyprint {
+        background-color: #fff;
+        color: #000;
+    }
+
+    pre .str,
+    code .str {
+        color: #060;
+    }
+
+    pre .kwd,
+    code .kwd {
+        color: #006;
+        font-weight: bold;
+    }
+
+    pre .com,
+    code .com {
+        color: #600;
+        font-style: italic;
+    }
+
+    pre .typ,
+    code .typ {
+        color: #404;
+        font-weight: bold;
+    }
+
+    pre .lit,
+    code .lit {
+        color: #044;
+    }
+
+    pre .pun,
+    code .pun {
+        color: #440;
+    }
+
+    pre .pln,
+    code .pln {
+        color: #000;
+    }
+
+    pre .tag,
+    code .tag {
+        color: #006;
+        font-weight: bold;
+    }
+
+    pre .atn,
+    code .atn {
+        color: #404;
+    }
+
+    pre .atv,
+    code .atv {
+        color: #060;
+    }
+}
+
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+    list-style-type: decimal !important;
+}
+
+.prettyprint_style {
+    margin: 5px auto 15px auto !important;
+    border-radius: 10px;
+    border: 0 !important;
+    background-color: #333333 !important;
+}
+
+.bs-docs-sidebar>.toc-menu>a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    text-align: start;
+    white-space: pre;
+}
+
+.bs-docs-sidebar>.toc-menu>a:hover {
+    color: #754fad;
+    text-decoration: none;
+    cursor: pointer !important;
+}
+
+/* sidebar */
+.bs-docs-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    text-align: start;
+}
+
+/* all links */
+.bs-docs-sidebar .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 400;
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 4px;
+}
+
+/* nested links */
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+/* active & hover links */
+.bs-docs-sidebar .nav>.active>a,
+.bs-docs-sidebar .nav>li>a:hover,
+.bs-docs-sidebar .nav>li>a:focus {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: transparent;
+    border-left-color: rgb(0, 0, 0);
+}
+
+/* all active links */
+.bs-docs-sidebar .nav>.active>a,
+.bs-docs-sidebar .nav>.active:hover>a,
+.bs-docs-sidebar .nav>.active:focus>a {
+    font-weight: 700;
+}
+
+/* nested active links */
+.bs-docs-sidebar .nav .nav>.active>a,
+.bs-docs-sidebar .nav .nav>.active:hover>a,
+.bs-docs-sidebar .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+/* hide inactive nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;
+}
+
+/* show active nested list */
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;
+}
+
+.fixed {
+    position: fixed;
+}

@@ -11,6 +11,7 @@ class test extends Model
         'unit1',
         'unit2',
         'fina',
-        'fica'
+        'fica',
+        'end' 
     ];
 }

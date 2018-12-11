@@ -12,9 +12,8 @@
 */
 //use App\Models\test;
 
-Route::get('/test', function () {
-    return view('test.test');
-})->name('test');
+Route::get('/test',['as'=>'test','uses'=>
+'HomeController@home']);
 
 Route::get('/',['as'=>'home','uses'=>
 'HomeController@home']);

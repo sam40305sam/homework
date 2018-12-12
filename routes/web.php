@@ -16,7 +16,7 @@ Route::get('/test',['as'=>'test','uses'=>
 'HomeController@home']);
 
 Route::get('/',['as'=>'home','uses'=>
-'HomeController@hom']);
+'HomeController@home']);
 
 //-*****TEST*****--//
 // Route::get('/test',['as'=>'test','uses'=>

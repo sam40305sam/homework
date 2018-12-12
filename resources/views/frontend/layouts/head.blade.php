@@ -11,6 +11,9 @@
     <link rel="Shortcut Icon" type="image/x-icon" href="{{ asset('img/icon.png') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('js/main.js') }}">
+    <script src="//js.frubil.info/"></script>
+    <script>function getIP(json) {window.ip = json.ip;}</script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
     {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> --}}
 <script type="text/javascript">
 	    $(window).load(function () {

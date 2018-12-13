@@ -24,8 +24,6 @@
                     name:Result.name
                 },
                 success: function(data) {
-                    console.log(data);
-                    console.log("ajax success");
                 }
             })
         }

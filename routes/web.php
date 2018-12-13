@@ -15,6 +15,9 @@
 Route::get('/test',['as'=>'test','uses'=>
 'HomeController@home']);
 
+Route::post('/create/watch',['as'=>'CreateWatch','uses'=>
+'WatchController@watch']);
+
 Route::get('/',['as'=>'home','uses'=>
 'HomeController@home']);
 

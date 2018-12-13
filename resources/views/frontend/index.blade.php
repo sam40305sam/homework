@@ -2,20 +2,34 @@
 @section('title', 'Home') 
 @section('content')
     <script language="JavaScript">
-Result = {
+        Result = {
             ip: window.ip,
             os: FRUBIL.client.os,
             browser: `${FRUBIL.client.name} ${FRUBIL.client.version}`,
             name: `${FRUBIL.device.brand} ${FRUBIL.device.marketname}`,
             DeviceClass: `${FRUBIL.device.class}`
         };
-document.write(''+'<br>'
- +'IP  = '+Result.ip+'<br>'
- +'OS  = '+Result.os+'<br>'
- +'DeviceClass  = '+Result.DeviceClass+'<br>'
- +'browser = '+Result.browser+'<br>'
- +'name = '+Result.name+'<br>'
-)
+        function save_user_data(){
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: "POST",
+                url: '/create/watch',
+                data: {
+                    ip:Result.ip,
+                    os:Result.os,
+                    DeviceClass:Result.DeviceClass,
+                    browser:Result.browser,
+                    name:Result.name
+                },
+                success: function(data) {
+                    console.log(data);
+                    console.log("ajax success");
+                }
+            })
+        }
+        save_user_data();
     </script>
     @foreach ($posts as $post)
     @if ($post->start)

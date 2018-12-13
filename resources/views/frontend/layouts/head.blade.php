@@ -15,6 +15,7 @@
     <script>function getIP(json) {window.ip = json.ip;}</script>
     <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
     {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 <script type="text/javascript">
 	    $(window).load(function () {
             var footerClass = document.getElementsByTagName("footer")[0].classList;

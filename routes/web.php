@@ -22,7 +22,8 @@ Route::get('/',['as'=>'home','uses'=>
 'HomeController@home']);
 
 Route::get('/facebook/link', function() {
-    return Socialite::driver('facebook')->scopes(['email']);
+    return Socialite::driver('facebook')
+               ->scopes(['email'])->redirect();
    });
    
    Route::get('/facebook/callback', function() {

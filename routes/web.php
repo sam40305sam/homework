@@ -21,6 +21,15 @@ Route::post('/create/watch',['as'=>'CreateWatch','uses'=>
 Route::get('/',['as'=>'home','uses'=>
 'HomeController@home']);
 
+Route::get('/facebook/link', function() {
+    return Socialite::driver('facebook')
+               ->scopes(['email'])->redirect();
+   });
+   
+   Route::get('/facebook/callback', function() {
+    $user = Socialite::driver('facebook')->user();
+    var_dump($user);
+   });
 //-*****TEST*****--//
 // Route::get('/test',['as'=>'test','uses'=>
 // 'HomeController@home']);

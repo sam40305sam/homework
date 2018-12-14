@@ -23,7 +23,7 @@ Route::get('/',['as'=>'home','uses'=>
 
 Route::get('/facebook/link', function() {
     return Socialite::driver('facebook')
-               ->scopes(['email'])->redirect();
+               ->scopes(['email']);
    });
    
    Route::get('/facebook/callback', function() {

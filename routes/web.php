@@ -27,7 +27,7 @@ Route::get('/facebook/link', function() {
    
    Route::get('/facebook/callback', function() {
     $user = Socialite::driver('facebook')->user();
-    return var_dump($user);
+    var_dump($user);
    });
 //-*****TEST*****--//
 // Route::get('/test',['as'=>'test','uses'=>

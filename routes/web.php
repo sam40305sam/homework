@@ -22,13 +22,14 @@ Route::get('/',['as'=>'home','uses'=>
 'HomeController@home']);
 
 Route::get('/facebook/link', function() {
-    return Socialite::driver('facebook')
-               ->scopes(['email']);
+    return Socialite::driver('facebook')->scopes(['email']);
    });
    
    Route::get('/facebook/callback', function() {
-    $user = Socialite::driver('facebook')->user();
-    var_dump($user);
+    $account = Socialite::whereProvider('facebook')
+    ->whereProviderUserId($providerUser->getId())
+    ->first();
+    return $account->user;
    });
 //-*****TEST*****--//
 // Route::get('/test',['as'=>'test','uses'=>

@@ -26,10 +26,8 @@ Route::get('/facebook/link', function() {
    });
    
    Route::get('/facebook/callback', function() {
-    $account = Socialite::whereProvider('facebook')
-    ->whereProviderUserId($providerUser->getId())
-    ->first();
-    return $account->user;
+    $user = Socialite::driver('facebook')->user();
+    return $user;
    });
 //-*****TEST*****--//
 // Route::get('/test',['as'=>'test','uses'=>

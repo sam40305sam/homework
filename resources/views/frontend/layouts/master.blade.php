@@ -11,7 +11,7 @@
             </div>
 @include('frontend.layouts.sidebar')
         </div>
-    </div onload="">
+    </div>
 @include('frontend.layouts.footer')
 </body>
 

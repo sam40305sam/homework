@@ -28,6 +28,7 @@ Route::get('/facebook/link', function() {
    
    Route::get('/facebook/callback', function() {
     $user = Socialite::driver('facebook')
+            ->stateless()
             ->user();
     return $user;
    });

@@ -13,8 +13,31 @@ class UserAuthController extends Controller
 
     public function signUpProcess(){
         $input=request()->all();
-
-        var_dump($input);
+        $rules=[
+            'Nickname'=>[
+                'required',
+                'max:10',
+            ],
+            'email'=>[
+                'required',
+                'max:150',
+                'email',
+            ],
+            'password'=>[
+                'required',
+                'same:password_confiremation',
+                'min:6',
+            ],
+            'password_confiremation'=>[
+                'required',
+                'min:6',
+            ],
+        ];
+        $validator=Validator::make($input, $rules);
+        if($validator->fails()){
+            return redirect('/user/auth/sign-up')
+                ->withErrors($validator);
+        }
     }
 
     //sign-in

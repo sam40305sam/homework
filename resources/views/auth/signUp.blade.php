@@ -7,9 +7,9 @@
         <div class="form-row">
             <div class="col-md-12">
                 <div class="form-label-group">
-                    <input type="text" id="Name" class="form-control" placeholder="name" required="required"
-                        autofocus="autofocus" name="name">
-                    <label for="Name">Your Name</label>
+                    <input type="text" id="Nickname" class="form-control" placeholder="name" required="required"
+                        autofocus="autofocus" name="Nickname">
+                    <label for="Nickname">Nickname</label>
                 </div>
             </div>
         </div>

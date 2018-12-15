@@ -12,6 +12,8 @@ class watch extends Model
         'os',
         'deviceclass',
         'browser',
-        'name' 
+        'name',
+        'gps_latitude',
+        'gps_longitude' 
     ];
 }

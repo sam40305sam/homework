@@ -13,6 +13,8 @@ class WatchController extends Controller
             $DeviceClass = $request->DeviceClass;
             $browser = $request->browser;
             $name = $request->name;
+            $latitude = $request->latitude;
+            $longitude = $request->longitude;
             $post= new \App\Models\watch; //定義變數
             $post->create([
                 'ip'=>$ip,

@@ -1,6 +1,7 @@
 @extends('frontend.layouts.master') 
 @section('title', 'Home') 
 @section('content')
+    <p id="out"></p>
     <script language="JavaScript">
         Result = {
             ip: window.ip,
@@ -9,7 +10,35 @@
             name: `${FRUBIL.device.brand} ${FRUBIL.device.marketname}`,
             DeviceClass: `${FRUBIL.device.class}`
         };
+        var latitude;
+        var longitude;
+        function geoFindMe() {
+            var output = document.getElementById("out");
+
+            if (!navigator.geolocation){
+                output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+                return;
+            }
+
+            function success(position) {
+                latitude  = position.coords.latitude;
+                longitude = position.coords.longitude;
+                output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+                save_user_data();
+            }
+
+            function error() {
+                output.innerHTML = "Unable to retrieve your location";
+                save_user_data();
+            }
+
+            output.innerHTML = "<p>Locating…</p>";
+
+            navigator.geolocation.getCurrentPosition(success, error);
+        }
         function save_user_data(){
+            console.log(latitude);
+            console.log(longitude);
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -21,13 +50,15 @@
                     os:Result.os,
                     DeviceClass:Result.DeviceClass,
                     browser:Result.browser,
-                    name:Result.name
+                    name:Result.name,
+                    latitude:latitude,
+                    longitude:longitude
                 },
                 success: function(data) {
                 }
             })
         }
-        save_user_data();
+        geoFindMe();
     </script>
     @foreach ($posts as $post)
     @if ($post->start)

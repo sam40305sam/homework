@@ -5,13 +5,13 @@
 <form action="/user/auth/sign-in" method="POST">
     <div class="form-group">
         <div class="form-label-group">
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required" name="email">
             <label for="inputEmail">Email</label>
         </div>
     </div>
     <div class="form-group">
         <div class="form-label-group">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required" name="password">
             <label for="inputPassword">Password</label>
         </div>
     </div>

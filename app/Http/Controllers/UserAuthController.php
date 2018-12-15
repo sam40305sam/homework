@@ -12,7 +12,7 @@ class UserAuthController extends Controller
 
     public function signInProcess(){
         $input=request()->all();
-        
-        return view('auth.signIn');
+
+        var_dump($input);
     }
 }

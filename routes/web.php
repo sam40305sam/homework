@@ -12,8 +12,8 @@
 */
 //use App\Models\test;
 
-Route::get('/test',['as'=>'test','uses'=>
-'HomeController@home']);
+// Route::get('/test',['as'=>'test','uses'=>
+// 'HomeController@home']);
 
 Route::post('/create/watch',['as'=>'CreateWatch','uses'=>
 'WatchController@watch']);
@@ -22,16 +22,29 @@ Route::get('/',['as'=>'home','uses'=>
 'HomeController@home']);
 
 Route::get('/facebook/link', function() {
-    return Socialite::driver('facebook')
-               ->scopes(['email'])->redirect();
-   });
+        return Socialite::driver('facebook')
+                ->scopes(['email'])->redirect();
+});
    
-   Route::get('/facebook/callback', function() {
+Route::get('/facebook/callback', function() {
     $user = Socialite::driver('facebook')
             ->stateless()
             ->user();
     return $user;
-   });
+});
+
+//--*****USER*****--//
+
+Route::group(['prefix'=>'user'], function() {
+        Route::group(['prefix'=>'auth'], function() {
+                Route::get('/sign-in','UserAuthController@signInPage');
+                Route::post('/sign-in','UserAuthController@signInProcess');
+                Route::get('/sign-out','UserAuthController@signOut');
+        });
+});
+
+
+
 //-*****TEST*****--//
 // Route::get('/test',['as'=>'test','uses'=>
 // 'HomeController@home']);

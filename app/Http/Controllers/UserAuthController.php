@@ -17,6 +17,7 @@ class UserAuthController extends Controller
             'Nickname'=>[
                 'required',
                 'max:10',
+                'min:2',
             ],
             'email'=>[
                 'required',
@@ -36,7 +37,8 @@ class UserAuthController extends Controller
         $validator=Validator::make($input, $rules);
         if($validator->fails()){
             return redirect('/user/auth/sign-up')
-                ->withErrors($validator);
+                ->withErrors($validator)
+                ->withInput();
         }
     }
 

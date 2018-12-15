@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class WatchController extends Controller
 {
     public function watch(Request $request){
-        //if($request->ip!="150.117.10.27"&&$request->ip!="127.0.0.1"){
+        if($request->ip!="150.117.10.27"&&$request->ip!="127.0.0.1"){
             $ip = $request->ip;
             $os = $request->os;
             $DeviceClass = $request->DeviceClass;
@@ -25,6 +25,6 @@ class WatchController extends Controller
                 'gps_latitude'=>$latitude,
                 'gps_longitude'=>$longitude
             ]); //增加資料
-        //}
+        }
     }
 }

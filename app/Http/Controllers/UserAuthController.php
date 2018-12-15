@@ -25,10 +25,10 @@ class UserAuthController extends Controller
             ],
             'password'=>[
                 'required',
-                'same:password_confiremation',
+                'same:password_confirmation',
                 'min:6',
             ],
-            'password_confiremation'=>[
+            'password_confirmation'=>[
                 'required',
                 'min:6',
             ],

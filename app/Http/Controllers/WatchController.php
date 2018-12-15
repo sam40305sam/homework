@@ -20,8 +20,8 @@ class WatchController extends Controller
                 'deviceclass'=>$DeviceClass,
                 'browser'=>$browser,
                 'name'=>$name,
-                'gps_latitude'=>$gps_latitude,
-                'gps_longitude'=>$gps_longitude
+                'gps_latitude'=>$latitude,
+                'gps_longitude'=>$longitude
             ]); //增加資料
         //}
     }

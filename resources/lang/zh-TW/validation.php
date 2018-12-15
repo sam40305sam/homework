@@ -107,11 +107,14 @@ return [
     |
     */
     'attributes' => [
+        'nickname' => '暱稱',
         'username' => '用户名',
+        'email' => '電子信箱',
         'account'  => '賬號',
         'captcha'  => '驗證碼',
         'mobile'   => '手機號',
         'password' => '密碼',
+        'password_confirmation' => '確認密碼',
         'content'  => '內容',
         'identity' => '手機號/用户名',
     ],
